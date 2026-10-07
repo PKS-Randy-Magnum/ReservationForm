@@ -1,0 +1,16 @@
+{
+  "action": "saveDraft",
+  "password": "shared-access-code",
+  "draft_id": "optional-existing-id",
+  "form_url": "https://TheLasalleChicago-hydai.github.io/wedding-room-block-form/",
+  "payload": {
+    "couple_name": "Smith & Jones",
+    "wedding_date": "2026-06-14",
+    "complete_by": "2026-05-01",
+    "email": "guest@example.com",
+    "phone": "(312) 555-0100",
+    "vendors": [
+      { "company": "Florist Co", "service": "Delivery", "access": "Saturday 10:00 AM" }
+    ]
+  }
+}

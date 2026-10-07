@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Manual — Wedding Guest Room Block Form | The LaSalle Chicago</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f9f7f2;
+      --navy: #0a1e3c;
+      --gold: #b58e58;
+      --line: #d4b483;
+      --muted: #5a6578;
+      --ok: #1e5c3a;
+      --warn: #8b2e2e;
+      --serif: "Libre Baskerville", Georgia, serif;
+      --sans: "Source Sans 3", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--navy);
+      background: var(--cream);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .cover {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 1rem;
+      page-break-after: always;
+    }
+    .cover img.logo { height: 72px; margin-bottom: 1.5rem; }
+    .cover h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 2rem;
+      margin: 0 0 0.75rem;
+    }
+    .cover .subtitle { color: var(--muted); margin: 0 0 2rem; max-width: 28em; }
+    .cover .meta {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--navy);
+      padding: 0.35rem 0.85rem;
+      letter-spacing: 0.04em;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.65rem;
+      margin: 0 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--line);
+      page-break-after: avoid;
+    }
+    h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin: 1.75rem 0 0.6rem;
+      page-break-after: avoid;
+    }
+    p, li { max-width: 42em; }
+    .lead { font-size: 1.08rem; color: var(--muted); }
+
+    section.chapter {
+      page-break-before: always;
+      padding-top: 0.5rem;
+    }
+    section.chapter:first-of-type { page-break-before: auto; }
+
+    .toc {
+      page-break-after: always;
+    }
+    .toc ol {
+      padding-left: 1.25rem;
+    }
+    .toc a {
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--gold);
+    }
+    .toc a:hover { border-bottom-style: solid; }
+    .toc li { margin: 0.55rem 0; }
+
+    .figure {
+      margin: 1.25rem 0 1.75rem;
+      page-break-inside: avoid;
+    }
+    .figure img {
+      display: block;
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      border: 1px solid #e0d8c8;
+      background: #fff;
+    }
+    .figure figcaption {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 0.45rem;
+    }
+
+    .callout {
+      border-left: 3px solid var(--gold);
+      background: #fff;
+      padding: 0.85rem 1rem;
+      margin: 1.1rem 0;
+      page-break-inside: avoid;
+    }
+    .callout.warn {
+      border-left-color: var(--warn);
+      background: #fdf6f4;
+    }
+    .callout.ok {
+      border-left-color: var(--ok);
+      background: #f3f8f5;
+    }
+    .callout strong { display: block; margin-bottom: 0.25rem; }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .steps > li {
+      position: relative;
+      padding: 0.85rem 0.85rem 0.85rem 3.25rem;
+      margin: 0.65rem 0;
+      background: #fff;
+      border: 1px solid #e6dfd2;
+      page-break-inside: avoid;
+    }
+    .steps > li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0.75rem;
+      top: 0.85rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.7rem;
+      text-align: center;
+    }
+
+    table.simple {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      font-size: 0.95rem;
+      margin: 1rem 0 1.5rem;
+      page-break-inside: avoid;
+    }
+    table.simple th,
+    table.simple td {
+      border: 1px solid #e0d8c8;
+      padding: 0.55rem 0.7rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    table.simple th {
+      background: #f3eee4;
+      font-weight: 600;
+    }
+
+    code, .mono {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.86em;
+      background: #fff;
+      border: 1px solid #e6dfd2;
+      padding: 0.08em 0.35em;
+    }
+    pre.url {
+      white-space: pre-wrap;
+      word-break: break-all;
+      background: #fff;
+      border: 1px solid #e6dfd2;
+      padding: 0.75rem 0.9rem;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.82rem;
+      page-break-inside: avoid;
+    }
+
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 1rem 0 1.5rem;
+      page-break-inside: avoid;
+    }
+    .flow .box {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 0.55rem 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .flow .arrow {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .print-hint {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      padding: 0.65rem 1rem;
+      cursor: pointer;
+      font: inherit;
+      z-index: 20;
+    }
+    .print-hint:hover { background: #1a3358; }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      .page { max-width: none; padding: 0; }
+      .print-hint { display: none !important; }
+      a { color: inherit; text-decoration: none; border: none; }
+      .cover { min-height: auto; height: 100vh; }
+      .figure img { max-width: 100%; }
+    }
+
+    @page {
+      size: letter;
+      margin: 0.7in 0.75in 0.85in;
+      @bottom-center {
+        content: "The LaSalle Chicago — Room Block Form Manual  ·  page " counter(page);
+        font-family: "Source Sans 3", "Segoe UI", sans-serif;
+        font-size: 9pt;
+        color: #5a6578;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button type="button" class="print-hint" onclick="window.print()">Print / Save as PDF</button>
+
+  <div class="page">
+    <!-- COVER -->
+    <header class="cover" id="cover">
+      <img class="logo" src="assets/manual/logo.png" alt="The LaSalle Chicago, Autograph Collection" />
+      <div class="badge">Staff &amp; coordinator guide</div>
+      <h1>Wedding Guest Room Block Form</h1>
+      <p class="subtitle">
+        A simple guide to what this system does, how couples and staff use it,
+        and how to change basic settings.
+      </p>
+      <p class="meta">
+        Live form:<br />
+        <span class="mono">https://TheLasalleChicago-hydai.github.io/wedding-room-block-form/</span>
+      </p>
+      <p class="meta">Version for hotel use · Print this file for page numbers and offline reading</p>
+    </header>
+
+    <!-- TOC -->
+    <nav class="toc" id="toc" aria-label="Table of contents">
+      <h2>Table of contents</h2>
+      <ol>
+        <li><a href="#what-it-is">What this system is</a></li>
+        <li><a href="#big-picture">The big picture</a></li>
+        <li><a href="#for-couples">How couples use the form</a></li>
+        <li><a href="#for-staff">How staff use the form</a></li>
+        <li><a href="#links">Links you will send</a></li>
+        <li><a href="#list-email">Where answers go (list &amp; email)</a></li>
+        <li><a href="#passwords">Passwords — what they are &amp; how to change them</a></li>
+        <li><a href="#edit">How to edit the system</a></li>
+        <li><a href="#list-pa">Edit a SharePoint column &amp; reconnect Power Automate</a></li>
+        <li><a href="#emails">Change emails &amp; add notification recipients</a></li>
+        <li><a href="#expressions">Safe expressions (dates, numbers, empty values)</a></li>
+        <li><a href="#troubleshoot">If something goes wrong (Power Automate)</a></li>
+        <li><a href="#quick-ref">Quick reference</a></li>
+        <li><a href="#license">License &amp; disclaimer</a></li>
+      </ol>
+      <div class="callout">
+        <strong>Tip</strong>
+        On a computer: use <em>Print → Save as PDF</em> to get page numbers at the bottom of each page.
+      </div>
+    </nav>
+
+    <!-- 1 -->
+    <section class="chapter" id="what-it-is">
+      <h2>1. What this system is</h2>
+      <p class="lead">
+        This is an online form that collects wedding room-block details for The LaSalle Chicago.
+      </p>
+      <p>It replaces chasing answers by email or paper. Couples fill out the form. Staff can start or review a draft. When the couple submits, the hotel gets an email with a PDF summary.</p>
+
+      <h3>What it does (in plain English)</h3>
+      <ul>
+        <li>Locks the form behind an <strong>access code</strong></li>
+        <li>Lets people <strong>save progress</strong> and come back later</li>
+        <li>Stores answers in a Microsoft <strong>list</strong> (SharePoint)</li>
+        <li>Emails the couple a <strong>resume link</strong> when they save</li>
+        <li>Emails the hotel a <strong>PDF</strong> when they submit final</li>
+        <li>Lets staff unlock with a <strong>staff code</strong> to edit without spamming emails</li>
+      </ul>
+
+      <div class="callout ok">
+        <strong>You do not need to run a server</strong>
+        The form lives on GitHub Pages. Saving and emailing are handled by Microsoft Power Automate and SharePoint.
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="chapter" id="big-picture">
+      <h2>2. The big picture</h2>
+      <p>Four pieces work together:</p>
+
+      <figure class="figure">
+        <img src="assets/manual/manual-overview.jpg" alt="Diagram: Form connects to Power Automate, then SharePoint List and Email" />
+        <figcaption>Figure 1. Form → Power Automate → SharePoint list + email.</figcaption>
+      </figure>
+
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Piece</th>
+            <th>What it is</th>
+            <th>Who touches it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Form</strong></td>
+            <td>The web page couples and staff fill out</td>
+            <td>Everyone using a browser</td>
+          </tr>
+          <tr>
+            <td><strong>Power Automate</strong></td>
+            <td>The “robot” that checks the password, saves data, sends email, builds PDF</td>
+            <td>IT / coordinator who maintains the flow</td>
+          </tr>
+          <tr>
+            <td><strong>SharePoint list</strong></td>
+            <td>The spreadsheet-like list of every wedding draft/submission</td>
+            <td>Hotel staff</td>
+          </tr>
+          <tr>
+            <td><strong>Email / OneDrive</strong></td>
+            <td>Resume links to couples; PDF alerts to staff; file copies of drafts/submits</td>
+            <td>Outlook / OneDrive</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Happy path (guest)</h3>
+      <div class="flow">
+        <span class="box">Unlock</span><span class="arrow">→</span>
+        <span class="box">Fill form</span><span class="arrow">→</span>
+        <span class="box">Save</span><span class="arrow">→</span>
+        <span class="box">Resume email</span><span class="arrow">→</span>
+        <span class="box">Submit</span><span class="arrow">→</span>
+        <span class="box">Staff PDF email</span>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="chapter" id="for-couples">
+      <h2>3. How couples use the form</h2>
+      <p>Give the couple: <strong>(1)</strong> the form link, and <strong>(2)</strong> the guest access code.</p>
+
+      <figure class="figure">
+        <img src="assets/manual/manual-guest-flow.jpg" alt="Five guest steps: open link, enter code, fill form, save, submit" />
+        <figcaption>Figure 2. Couple steps from open to submit.</figcaption>
+      </figure>
+
+      <ol class="steps">
+        <li>
+          <strong>Open the link</strong> in Chrome, Edge, or Safari.
+        </li>
+        <li>
+          <strong>Enter the access code</strong> from the hotel, then unlock.
+        </li>
+        <li>
+          <strong>Fill in contact details</strong> (name, wedding date, email). Email is needed so they can get a resume link.
+        </li>
+        <li>
+          <strong>Click Save progress</strong> anytime. They get an email with a link to continue later. Nothing is final yet.
+        </li>
+        <li>
+          <strong>Click Submit final</strong> when everything is complete. They should see a thank-you screen. The hotel gets the PDF alert.
+        </li>
+      </ol>
+
+      <div class="callout">
+        <strong>What guests must fill before Save</strong>
+        Couple/party name, wedding date, and email.
+      </div>
+
+      <div class="callout">
+        <strong>What guests must fill before Submit</strong>
+        The full form. If they answer <em>No</em> to valet, bags, brunch, or getting-ready room, they can skip those detail boxes. Ceremony time, reception time, and group arrival/departure are always required on submit.
+      </div>
+
+      <div class="callout warn">
+        <strong>Within 30 days of the wedding</strong>
+        A red banner warns that late requests may not be assured. Complete-by still defaults to 30 days before the wedding date.
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="chapter" id="for-staff">
+      <h2>4. How staff use the form</h2>
+      <p>Staff use a <strong>different password</strong> (staff code). After unlock you should see a gold banner: <em>Staff mode</em>.</p>
+
+      <figure class="figure">
+        <img src="assets/manual/manual-staff-flow.jpg" alt="Staff workflow from invite through review of submission" />
+        <figcaption>Figure 3. Typical staff workflow.</figcaption>
+      </figure>
+
+      <h3>Recommended: staff starts the draft</h3>
+      <ol class="steps">
+        <li>Open the live form (optionally with dates already in the URL — see <a href="#links">Links</a>).</li>
+        <li>Unlock with the <strong>staff</strong> code.</li>
+        <li>Enter at least <strong>couple name</strong> and <strong>wedding date</strong>.</li>
+        <li>Click <strong>Save progress</strong>. No customer email is sent for staff saves.</li>
+        <li>Copy the link from the browser address bar, or open the SharePoint list and copy <strong>Form URL</strong>.</li>
+        <li>Send that link + the <strong>guest</strong> access code to the couple.</li>
+      </ol>
+
+      <h3>Open a draft while the couple is still working</h3>
+      <ol class="steps">
+        <li>Open the <strong>Wedding Room Planner</strong> list in SharePoint.</li>
+        <li>Find the couple. Click <strong>Form URL</strong> (or paste <code>?draft=…</code> onto the form link).</li>
+        <li>Unlock with the <strong>staff</strong> code.</li>
+        <li>Edit and Save. List updates; couple is not emailed again from a staff save.</li>
+      </ol>
+
+      <h3>After the couple submits</h3>
+      <ul>
+        <li>Staff get an Outlook email with a PDF summary.</li>
+        <li>List status becomes <strong>submitted</strong>.</li>
+        <li>Staff can reopen the form, edit, and submit again to refresh the PDF <em>without</em> another email (staff path).</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Staff-only section on the form</strong>
+        “Important dates at a glance” is hidden from couples. Those dates auto-fill from the wedding / complete-by date (cutoff &amp; menu = complete-by; vendor list = wedding − 14 days; gift bag = day before wedding).
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="chapter" id="links">
+      <h2>5. Links you will send</h2>
+      <p>Start from the live form:</p>
+      <pre class="url">https://TheLasalleChicago-hydai.github.io/wedding-room-block-form/</pre>
+
+      <h3>New couple (dates filled in advance)</h3>
+      <pre class="url">https://TheLasalleChicago-hydai.github.io/wedding-room-block-form/?wedding_date=2026-06-15&amp;complete_by=2026-05-16</pre>
+      <p>Use <code>YYYY-MM-DD</code>. No spaces. If you omit complete-by, the form uses wedding date minus 30 days.</p>
+
+      <h3>Existing draft</h3>
+      <pre class="url">https://TheLasalleChicago-hydai.github.io/wedding-room-block-form/?draft=4ba53f80</pre>
+      <p>Or include dates too:</p>
+      <pre class="url">https://TheLasalleChicago-hydai.github.io/wedding-room-block-form/?draft=4ba53f80&amp;wedding_date=2026-06-15&amp;complete_by=2026-05-16</pre>
+
+      <table class="simple">
+        <thead>
+          <tr><th>Piece in the link</th><th>Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>wedding_date</code></td><td>Prefills wedding date</td></tr>
+          <tr><td><code>complete_by</code></td><td>Prefills “Please complete by”</td></tr>
+          <tr><td><code>draft</code></td><td>Loads that saved row after unlock</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 6 -->
+    <section class="chapter" id="list-email">
+      <h2>6. Where answers go</h2>
+
+      <h3>SharePoint list — Wedding Room Planner</h3>
+      <p>Each save creates or updates one row. Useful columns:</p>
+      <ul>
+        <li><strong>Couple Name / Title</strong></li>
+        <li><strong>Draft ID</strong> — short ID used in the link</li>
+        <li><strong>Form URL</strong> — clickable resume link</li>
+        <li><strong>Status</strong> — <code>draft</code> or <code>submitted</code></li>
+        <li><strong>Wedding Date</strong>, <strong>Complete By</strong>, contact fields, and other mapped columns</li>
+      </ul>
+
+      <h3>Emails</h3>
+      <table class="simple">
+        <thead>
+          <tr><th>When</th><th>Who gets email</th><th>What</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Guest saves</td>
+            <td>Couple</td>
+            <td>Resume link</td>
+          </tr>
+          <tr>
+            <td>Staff saves</td>
+            <td>Nobody</td>
+            <td>List (and draft file) only</td>
+          </tr>
+          <tr>
+            <td>Guest submits</td>
+            <td>Hotel staff</td>
+            <td>Alert + PDF</td>
+          </tr>
+          <tr>
+            <td>Staff submits</td>
+            <td>Nobody</td>
+            <td>PDF/file refresh only</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>OneDrive folders</h3>
+      <p>HTML/PDF copies are stored under your Wedding Room Block folders (Drafts vs Submitted), named with the couple and draft ID.</p>
+    </section>
+
+    <!-- 7 -->
+    <section class="chapter" id="passwords">
+      <h2>7. Passwords — what they are &amp; how to change them</h2>
+      <p class="lead">There are two codes. Both live inside Power Automate — not on the public website.</p>
+
+      <table class="simple">
+        <thead>
+          <tr><th>Code</th><th>Who uses it</th><th>Compose name in the flow</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Guest access code</strong></td>
+            <td>Couples (and anyone you invite as a guest)</td>
+            <td><em>FormPassword</em></td>
+          </tr>
+          <tr>
+            <td><strong>Staff code</strong></td>
+            <td>Hotel employees only</td>
+            <td><em>StaffPassword</em></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>How to change a password</h3>
+      <ol class="steps">
+        <li>Open <a href="https://make.powerautomate.com" target="_blank" rel="noopener">make.powerautomate.com</a> and sign in with the hotel Microsoft account.</li>
+        <li>Open <strong>My flows</strong> → <strong>Wedding Room Block Form - API</strong> → <strong>Edit</strong>.</li>
+        <li>Near the top of the flow, find the Compose step named <strong>FormPassword</strong> (guest) or <strong>StaffPassword</strong> (staff).</li>
+        <li>Click that Compose. In the Inputs box, delete the old code and type the new one (plain text — no quotes needed).</li>
+        <li>Click <strong>Save</strong> (top right). Confirm the flow stays <strong>On</strong>.</li>
+        <li>Tell the people who need it the new code. Old codes stop working immediately.</li>
+        <li>Test: open the live form and unlock with the new code.</li>
+      </ol>
+
+      <div class="callout warn">
+        <strong>Do not put live passwords in GitHub</strong>
+        Anyone can view the public site files. Keep real codes only in Power Automate Compose steps.
+      </div>
+
+      <div class="callout">
+        <strong>Staff vs guest unlock</strong>
+        The flow’s password Condition should accept <em>either</em> FormPassword <em>or</em> StaffPassword. Staff unlock returns <code>staff: true</code> so the form shows staff-only fields and stays quiet on save/submit.
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section class="chapter" id="edit">
+      <h2>8. How to edit the system</h2>
+      <p>Only change what you need. Ask IT if you are unsure. Use this as a map to the detailed chapters.</p>
+
+      <table class="simple">
+        <thead>
+          <tr><th>I want to…</th><th>Go to</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Change guest or staff password</td>
+            <td><a href="#passwords">Section 7</a></td>
+          </tr>
+          <tr>
+            <td>Change who gets submit emails / add more people</td>
+            <td><a href="#emails">Section 10</a></td>
+          </tr>
+          <tr>
+            <td>Add or fix a SharePoint list column</td>
+            <td><a href="#list-pa">Section 9</a></td>
+          </tr>
+          <tr>
+            <td>Stop empty dates/numbers from breaking Save</td>
+            <td><a href="#expressions">Section 11</a></td>
+          </tr>
+          <tr>
+            <td>Change form wording / look</td>
+            <td>Below (A)</td>
+          </tr>
+          <tr>
+            <td>Change PDF look</td>
+            <td>Below (B)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>A. Change wording or look of the form</h3>
+      <ol class="steps">
+        <li>Edit files in the GitHub project (<code>index.html</code>, <code>styles.css</code>, <code>config.js</code>).</li>
+        <li>Push to the <code>main</code> branch.</li>
+        <li>Wait a minute, then hard-refresh the live page (Ctrl+Shift+R).</li>
+      </ol>
+      <p>In <code>config.js</code> you can change the title and the “Please complete by …” sentence. Leave <code>MOCK_MODE</code> as <code>false</code> for production.</p>
+
+      <h3>B. Change the PDF look</h3>
+      <p>Edit the HTML inside Compose actions <em>SubmitHTML</em> / <em>DraftHTML</em> (and staff copies). A starter template is in:</p>
+      <p><span class="mono">power-automate/FORM-PDF-HTML.md</span></p>
+      <p>Put the <strong>Response 200</strong> step right after Create/Update, before PDF convert/email, so the form does not time out.</p>
+
+      <h3>C. Full technical setup (first-time / rebuild)</h3>
+      <p>Follow <span class="mono">SETUP-ORDERED.md</span> in order. Do not skip phases. Field list: <span class="mono">power-automate/FIELD-MAP.md</span></p>
+    </section>
+
+    <!-- 9 -->
+    <section class="chapter" id="list-pa">
+      <h2>9. Edit a SharePoint column &amp; reconnect Power Automate</h2>
+      <p class="lead">
+        The list stores answers. Power Automate is the bridge that writes into that list.
+        If you change a column in the list, you must also tell the flow about it — or Save will fail or leave the cell blank.
+      </p>
+
+      <figure class="figure">
+        <img src="assets/manual/manual-list-pa-flow.jpg" alt="Five steps: Open SharePoint, add or edit column, open Power Automate, refresh Create/Update, save and test" />
+        <figcaption>Figure 4. Always: List first → then Power Automate → then test the form.</figcaption>
+      </figure>
+
+      <h3>Why two places?</h3>
+      <table class="simple">
+        <thead>
+          <tr><th>Place</th><th>What it does</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SharePoint list</strong><br /><em>Wedding Room Planner</em></td>
+            <td>Holds the columns (like spreadsheet headers) and the rows of wedding data</td>
+            <td>Add a column “Guest Rooms”</td>
+          </tr>
+          <tr>
+            <td><strong>Power Automate flow</strong><br /><em>Wedding Room Block Form - API</em></td>
+            <td>When someone Saves or Submits, writes each form answer into the matching list column</td>
+            <td>Map “guests” → Guest Rooms</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout warn">
+        <strong>Golden rule</strong>
+        Changing only the list is not enough. Changing only the flow is not enough. Do <em>both</em>, then test Save on the form.
+      </div>
+
+      <h3>Step A — Open the list</h3>
+      <ol class="steps">
+        <li>Sign in to Microsoft 365 with your hotel account (same one that owns the list).</li>
+        <li>Go to <strong>SharePoint</strong> (or <strong>Microsoft Lists</strong>).</li>
+        <li>Open the list named <strong>Wedding Room Planner</strong>.</li>
+        <li>You should see one row per wedding (draft or submitted), with columns like Couple Name, Draft ID, Form URL, Status.</li>
+      </ol>
+
+      <h3>Step B — Add or edit a column</h3>
+      <ol class="steps">
+        <li>At the far right of the column headers, click <strong>+ Add column</strong> (or open an existing column’s menu → <strong>Column settings</strong> → <strong>Edit</strong>).</li>
+        <li>Choose the type carefully:
+          <ul>
+            <li><strong>Single line of text</strong> — names, times as text, Form URL</li>
+            <li><strong>Multiple lines of text</strong> — long notes, FormPayload</li>
+            <li><strong>Number</strong> — guests, vehicles, attendance</li>
+            <li><strong>Date and time</strong> — wedding date, arrival (prefer Date only when possible)</li>
+            <li><strong>Choice</strong> — yes/no or valet payment options (use the exact choice values the form sends)</li>
+          </ul>
+        </li>
+        <li>Give it a clear name (example: <em>Guest Rooms</em>). Click <strong>Save</strong>.</li>
+        <li>Optional: drag the column where you want it in the list view.</li>
+      </ol>
+
+      <div class="callout">
+        <strong>Rename tip</strong>
+        Renaming a column in SharePoint usually keeps the link in Power Automate, but always open Create/Update afterward and confirm the field still shows. If it vanished, re-map it.
+      </div>
+
+      <h3>Step C — Open the Power Automate flow</h3>
+      <ol class="steps">
+        <li>Go to <a href="https://make.powerautomate.com" target="_blank" rel="noopener">make.powerautomate.com</a> (or Power Automate in the Microsoft 365 app launcher).</li>
+        <li>Click <strong>My flows</strong> (or <strong>Solutions</strong> if your team keeps it there).</li>
+        <li>Open <strong>Wedding Room Block Form - API</strong>.</li>
+        <li>Click <strong>Edit</strong>.</li>
+      </ol>
+
+      <h3>Step D — Link the new column in Create item &amp; Update item</h3>
+      <p>The flow has SharePoint steps that write the list. You must update <strong>every</strong> Create and Update that should fill this column (usually Save draft <em>and</em> Submit final — both Create and Update branches).</p>
+      <ol class="steps">
+        <li>Find a <strong>Create item</strong> step for <em>Wedding Room Planner</em>. Click it.</li>
+        <li>If your new column is missing from the form, click <strong>Show all</strong> / refresh the fields (or delete and re-add the Create item action so SharePoint reloads the column list).</li>
+        <li>Find your new column. Click in the value box → open the dynamic content / expression picker.</li>
+        <li>Map it to the matching form field (examples from the field map):
+          <ul>
+            <li>Guests → <code>guests</code></li>
+            <li>Email → <code>email</code></li>
+            <li>Wedding Date → <code>wedding_date</code></li>
+          </ul>
+        </li>
+        <li>Repeat for the matching <strong>Update item</strong> step(s).</li>
+        <li>Repeat for Submit-path Create/Update if those are separate actions.</li>
+        <li>Click <strong>Save</strong> on the flow. Leave the flow <strong>On</strong>.</li>
+      </ol>
+
+      <div class="callout">
+        <strong>Dates &amp; numbers that can be blank</strong>
+        Copy-paste formulas that send <em>null</em> when empty: <a href="#expressions">Section 11</a>.
+      </div>
+
+      <div class="callout warn">
+        <strong>Choice columns</strong>
+        Do <em>not</em> wrap yes/no choice values with <code>int(...)</code>. Choices are text (for example <code>yes</code> / <code>no</code>). Details in <a href="#expressions">Section 11</a>.
+      </div>
+
+      <h3>Step E — Test</h3>
+      <ol class="steps">
+        <li>Open the live form → unlock with the <strong>staff</strong> code.</li>
+        <li>Fill the related fields → click <strong>Save progress</strong>.</li>
+        <li>Open the SharePoint list → open that couple’s row → confirm the new column has the value.</li>
+        <li>If blank or Save errors: Power Automate → <strong>Run history</strong> → open the failed/latest run → expand the Create/Update step and read the red error.</li>
+      </ol>
+
+      <h3>Mini flow (remember this)</h3>
+      <div class="flow">
+        <span class="box">Open list</span><span class="arrow">→</span>
+        <span class="box">Add/edit column</span><span class="arrow">→</span>
+        <span class="box">Edit flow</span><span class="arrow">→</span>
+        <span class="box">Map Create + Update</span><span class="arrow">→</span>
+        <span class="box">Save flow</span><span class="arrow">→</span>
+        <span class="box">Test form Save</span>
+      </div>
+
+      <h3>Common “I only wanted to…” jobs</h3>
+      <table class="simple">
+        <thead>
+          <tr><th>Goal</th><th>List</th><th>Power Automate</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Add a new data column</td>
+            <td>Add column</td>
+            <td>Map it on every Create + Update</td>
+          </tr>
+          <tr>
+            <td>Rename a column label</td>
+            <td>Edit column name</td>
+            <td>Open Create/Update and confirm field still mapped</td>
+          </tr>
+          <tr>
+            <td>Stop collecting a field</td>
+            <td>Optional: hide column from view (don’t delete yet)</td>
+            <td>Clear the mapping; keep Response 200 where it is</td>
+          </tr>
+          <tr>
+            <td>Fix Form URL resume link</td>
+            <td>Column <em>Form URL</em> exists</td>
+            <td>Set Form URL expression on Create + Update (see FIELD-MAP)</td>
+          </tr>
+          <tr>
+            <td>Change password / email To</td>
+            <td>(none)</td>
+            <td>Compose FormPassword / StaffPassword, or Submit email To</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 10 -->
+    <section class="chapter" id="emails">
+      <h2>10. Change emails &amp; add notification recipients</h2>
+      <p class="lead">
+        When a couple submits, hotel staff get an Outlook email (usually with the PDF).
+        You control who is on that list inside Power Automate — not on the website.
+      </p>
+
+      <h3>Which email steps exist?</h3>
+      <table class="simple">
+        <thead>
+          <tr><th>Email</th><th>Typical step name</th><th>Who it goes to</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Resume link (guest Save)</td>
+            <td><em>Send an email</em> on the guest draft path</td>
+            <td>The couple’s email from the form</td>
+          </tr>
+          <tr>
+            <td>Submit alert + PDF</td>
+            <td><em>Send an email (V2) Submit</em> (or similar)</td>
+            <td><strong>Hotel staff</strong> — this is the one you edit for notifications</td>
+          </tr>
+          <tr>
+            <td>Staff Save / Staff Submit</td>
+            <td>(none on purpose)</td>
+            <td>Nobody — silent by design</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Change the main notification address</h3>
+      <ol class="steps">
+        <li>Open Power Automate → <strong>Wedding Room Block Form - API</strong> → <strong>Edit</strong>.</li>
+        <li>Scroll to the submit path. Find <strong>Send an email (V2)</strong> used after the PDF is ready (often named with “Submit”).</li>
+        <li>Click that action.</li>
+        <li>In the <strong>To</strong> field, replace the address with the correct hotel mailbox (example: <span class="mono">Hongyu.Dai@thelasallechicago.com</span>).</li>
+        <li>Optional: edit <strong>Subject</strong> and body text (keep it professional; the PDF is usually an attachment).</li>
+        <li>Click <strong>Save</strong>. Keep the flow <strong>On</strong>.</li>
+        <li>Test with a staff unlock first if you only want a PDF refresh, or a guest submit if you need a real notification email.</li>
+      </ol>
+
+      <h3>Add more people to receive notifications</h3>
+      <p>Pick one approach. The first is simplest.</p>
+
+      <h4>Option A — Several addresses in To / Cc (easiest)</h4>
+      <ol class="steps">
+        <li>Open the same <strong>Send an email (V2) Submit</strong> action.</li>
+        <li>In <strong>To</strong>, enter multiple work emails separated by a semicolon:
+          <pre class="url">person1@thelasallechicago.com; person2@thelasallechicago.com</pre>
+        </li>
+        <li>Or put one primary in <strong>To</strong> and others in <strong>Cc</strong> or <strong>Bcc</strong> (click <em>Show advanced options</em> if Cc/Bcc are hidden).</li>
+        <li><strong>Save</strong> the flow.</li>
+      </ol>
+
+      <h4>Option B — Shared mailbox or distribution list (best for teams)</h4>
+      <ol class="steps">
+        <li>Ask IT to create a shared mailbox or Microsoft 365 Group (example: <span class="mono">weddingblocks@thelasallechicago.com</span>) and add the people who should see alerts.</li>
+        <li>Put <em>only that one address</em> in the flow’s <strong>To</strong> field.</li>
+        <li>Add/remove people later in Outlook / Microsoft 365 admin — no flow edit needed each time.</li>
+      </ol>
+
+      <div class="callout">
+        <strong>Tip</strong>
+        Prefer a shared mailbox or group when several coordinators need every PDF. Then you are not editing Power Automate every time someone joins or leaves.
+      </div>
+
+      <h3>Guest resume email (usually leave alone)</h3>
+      <p>The Save-progress email goes to whatever address the couple typed. You typically do not hard-code recipients there. If that step fails, check Run history → the Send email step for that run.</p>
+
+      <div class="callout warn">
+        <strong>Staff path stays silent</strong>
+        Do not add a staff notification email unless leadership asks for it. Staff Save/Submit were built to update the list/PDF without inbox noise.
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section class="chapter" id="expressions">
+      <h2>11. Safe expressions (dates, numbers, empty values)</h2>
+      <p class="lead">
+        SharePoint is picky. If a date or number field is empty on the form and Power Automate sends a blank text box (<code>""</code>), Save can fail.
+        The fix is a short <strong>expression</strong>: “if empty, send null; otherwise send the value.”
+      </p>
+
+      <h3>What is an expression?</h3>
+      <p>An expression is a small formula you paste into a field instead of picking a value from the dynamic content list. In Power Automate:</p>
+      <ol class="steps">
+        <li>Open a <strong>Create item</strong> or <strong>Update item</strong> action.</li>
+        <li>Click the box for the SharePoint column (example: Group Arrival).</li>
+        <li>Click the <strong>fx</strong> (Expression) button — usually next to the dynamic content panel.</li>
+        <li>Paste one of the formulas below → click <strong>OK</strong> / <strong>Add</strong>.</li>
+        <li><strong>Save</strong> the flow, then test a Save with that field left blank <em>and</em> with a value filled in.</li>
+      </ol>
+
+      <div class="callout">
+        <strong>Where form values live</strong>
+        Most answers sit under the trigger body payload. The pattern looks like:
+        <span class="mono">json(triggerBody())?['payload']?['field_name']</span>
+        Replace <span class="mono">field_name</span> with the real key (examples below).
+      </div>
+
+      <h3>Dates (and date/time) — null if empty</h3>
+      <p>Use this whenever a date can be blank on a draft Save (Group Arrival, Group Departure, Brunch Time, etc.).</p>
+      <p><strong>Group Arrival</strong> example — paste into the Group Arrival column:</p>
+      <pre class="url">if(empty(json(triggerBody())?['payload']?['group_arrival']), null, json(triggerBody())?['payload']?['group_arrival'])</pre>
+      <p><strong>Group Departure:</strong></p>
+      <pre class="url">if(empty(json(triggerBody())?['payload']?['group_departure']), null, json(triggerBody())?['payload']?['group_departure'])</pre>
+      <p><strong>Brunch date/time:</strong></p>
+      <pre class="url">if(empty(json(triggerBody())?['payload']?['brunch_datetime']), null, json(triggerBody())?['payload']?['brunch_datetime'])</pre>
+      <p>Plain English: <em>If the couple left it blank, write nothing (null). If they filled it, write that date.</em></p>
+
+      <h3>Numbers — null if empty (not int on blanks)</h3>
+      <p>For optional number columns (vehicles, brunch attendance, ready-room guests, etc.):</p>
+      <pre class="url">if(empty(json(triggerBody())?['payload']?['valet_vehicles']), null, int(json(triggerBody())?['payload']?['valet_vehicles']))</pre>
+      <p>Swap <code>valet_vehicles</code> for the field you need, for example:</p>
+      <ul>
+        <li><code>brunch_attendance</code></li>
+        <li><code>getting_ready_guests</code></li>
+        <li><code>guests</code> (room block count) — only if you allow it blank on draft</li>
+      </ul>
+      <div class="callout warn">
+        <strong>Do not use bare <code>int(...)</code> on an empty field</strong>
+        <code>int("")</code> fails. Always wrap with <code>if(empty(...), null, int(...))</code> when the field might be blank.
+      </div>
+
+      <h3>Yes/No and Choice fields — text, never int</h3>
+      <p>Choice columns (Gift Bags, Valet Needed, Brunch, payment type, etc.) expect text like <code>yes</code>, <code>no</code>, <code>hosted</code>.</p>
+      <p>Map them as dynamic content <em>or</em> with a simple expression — <strong>without</strong> <code>int()</code>:</p>
+      <pre class="url">json(triggerBody())?['payload']?['bags_providing']</pre>
+      <pre class="url">json(triggerBody())?['payload']?['valet_needed']</pre>
+      <pre class="url">json(triggerBody())?['payload']?['valet_payment']</pre>
+      <p>If the choice can be blank on draft and SharePoint complains, use null-if-empty (still no int):</p>
+      <pre class="url">if(empty(json(triggerBody())?['payload']?['valet_payment']), null, json(triggerBody())?['payload']?['valet_payment'])</pre>
+
+      <h3>Plain text — usually fine as-is</h3>
+      <p>Names, email, phone, venues, times-as-text can use dynamic content directly, for example:</p>
+      <pre class="url">json(triggerBody())?['payload']?['couple_name']</pre>
+      <pre class="url">json(triggerBody())?['payload']?['email']</pre>
+      <p>Empty text is normally OK for Single line of text columns.</p>
+
+      <h3>Form URL (resume link)</h3>
+      <p>On every Create/Update (Save and Submit), set <strong>Form URL</strong> to an expression like:</p>
+      <p><strong>Save draft</strong> (uses variable DraftIDFinal — rename if yours differs):</p>
+      <pre class="url">concat(json(triggerBody())?['form_url'], '?draft=', variables('DraftIDFinal'), '&amp;wedding_date=', coalesce(json(triggerBody())?['payload']?['wedding_date'], ''), '&amp;complete_by=', coalesce(json(triggerBody())?['payload']?['complete_by'], ''))</pre>
+      <p><strong>Submit</strong> (use your submit draft-id output name):</p>
+      <pre class="url">concat(json(triggerBody())?['form_url'], '?draft=', outputs('DraftID_Submit'), '&amp;wedding_date=', coalesce(json(triggerBody())?['payload']?['wedding_date'], ''), '&amp;complete_by=', coalesce(json(triggerBody())?['payload']?['complete_by'], ''))</pre>
+
+      <h3>Cheat sheet</h3>
+      <table class="simple">
+        <thead>
+          <tr><th>Column type</th><th>Empty-safe pattern</th><th>Never do this</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Date / DateTime</td>
+            <td><code>if(empty(...), null, ...)</code></td>
+            <td>Send <code>""</code> into a date column</td>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td><code>if(empty(...), null, int(...))</code></td>
+            <td><code>int(...)</code> alone on a blank</td>
+          </tr>
+          <tr>
+            <td>Choice (yes/no)</td>
+            <td>Text value; optional null-if-empty</td>
+            <td><code>int(yes/no)</code></td>
+          </tr>
+          <tr>
+            <td>Text</td>
+            <td>Direct map usually fine</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout ok">
+        <strong>After any expression change</strong>
+        Save the flow → open the form → Save once with the field blank → Save again with the field filled → confirm the SharePoint row looks right.
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section class="chapter" id="troubleshoot">
+      <h2>12. If something goes wrong (Power Automate)</h2>
+      <p class="lead">Start here when Save/Submit fails, the list stays empty, or the form says “upstream server.”</p>
+
+      <h3>How to check a run (do this first)</h3>
+      <ol class="steps">
+        <li>Open Power Automate → flow <em>Wedding Room Block Form - API</em>.</li>
+        <li>Click <strong>Run history</strong> (28-day list of attempts).</li>
+        <li>Open the newest run (or match the time you clicked Save).</li>
+        <li>Green check = that step worked. Red X = that step failed (read the error text). Grey / “Skipped” = that branch did not run.</li>
+        <li>Expand <strong>Create item</strong> / <strong>Update item</strong> and any <strong>Response</strong> (200) steps.</li>
+      </ol>
+
+      <div class="callout">
+        <strong>Important</strong>
+        A run can look mostly green while the form still errors — often because the <em>Response 200</em> step was Skipped or ran too late (after PDF/email).
+      </div>
+
+      <h3>Simple decision guide</h3>
+      <div class="flow">
+        <span class="box">Form error?</span><span class="arrow">→</span>
+        <span class="box">Open Run history</span><span class="arrow">→</span>
+        <span class="box">Find red / skipped step</span><span class="arrow">→</span>
+        <span class="box">Fix that step</span><span class="arrow">→</span>
+        <span class="box">Save flow → retry form</span>
+      </div>
+
+      <h3>Symptom → what to do</h3>
+      <table class="simple">
+        <thead>
+          <tr><th>What you see</th><th>Likely cause</th><th>What to try</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Form: “Upstream server” / timeout, but flow is green</td>
+            <td>HTTP Response ran too late or was Skipped</td>
+            <td>Move <strong>Response 200</strong> to right after SharePoint Create/Update (before PDF convert / email). Place it after ItemLength so both Create <em>and</em> Update paths reply.</td>
+          </tr>
+          <tr>
+            <td>First Save works; later Saves fail the same way</td>
+            <td>Response only under Create, not Update</td>
+            <td>Guest/Staff 200 steps must sit outside the Create-only branch — after ItemLength.</td>
+          </tr>
+          <tr>
+            <td>Cannot unlock form</td>
+            <td>Wrong code, flow Off, or wrong API URL</td>
+            <td>Confirm flow is <strong>On</strong>. Check guest vs staff code. Confirm <code>config.js</code> API_URL matches this flow’s HTTP URL.</td>
+          </tr>
+          <tr>
+            <td>Create/Update fails mentioning a date column</td>
+            <td>Empty date sent as <code>""</code></td>
+            <td>Paste a null-if-empty date expression (Section 11).</td>
+          </tr>
+          <tr>
+            <td>Error with <code>int(...)</code> on a yes/no field</td>
+            <td>Choice treated as a number</td>
+            <td>Remove <code>int()</code>; map the choice as text (Section 11).</td>
+          </tr>
+          <tr>
+            <td>New list column always blank</td>
+            <td>Column added in SharePoint but not mapped in the flow</td>
+            <td>Follow Section 9 Steps C–E. Refresh Create/Update fields.</td>
+          </tr>
+          <tr>
+            <td>Wrong people get (or miss) PDF emails</td>
+            <td>To / Cc on Submit email is outdated</td>
+            <td>Section 10 — update addresses or use a shared mailbox.</td>
+          </tr>
+          <tr>
+            <td>Old password still works / new one does not</td>
+            <td>Compose not saved, or wrong Compose edited</td>
+            <td>Section 7 — edit FormPassword / StaffPassword → Save → test unlock.</td>
+          </tr>
+          <tr>
+            <td>PDF looks like raw JSON</td>
+            <td>SubmitHTML still dumping payload</td>
+            <td>Replace with the form-style template in <span class="mono">FORM-PDF-HTML.md</span>.</td>
+          </tr>
+          <tr>
+            <td>Staff does not see “Important dates”</td>
+            <td>Unlocked with guest code</td>
+            <td>Unlock with the <strong>staff</strong> code.</td>
+          </tr>
+          <tr>
+            <td>Couple got no resume email</td>
+            <td>Staff save (silent on purpose), or email step failed</td>
+            <td>Staff Saves do not email. Guest Saves should. Check Run history → Send email step.</td>
+          </tr>
+          <tr>
+            <td>Flow shows Failed on SharePoint</td>
+            <td>Column type mismatch or missing required field</td>
+            <td>Read the red error. Fix type (text vs number vs choice) or mapping. Re-test.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Where Response 200 should sit (sketch)</h3>
+      <div class="flow">
+        <span class="box">Create or Update item</span><span class="arrow">→</span>
+        <span class="box">Response 200 (form OK)</span><span class="arrow">→</span>
+        <span class="box">HTML / PDF / email (can be slower)</span>
+      </div>
+      <p>The form only needs the early “OK” reply. PDF and email can finish afterward.</p>
+
+      <div class="callout ok">
+        <strong>Still stuck?</strong>
+        Screenshot the failed step’s error message in Run history and send it to whoever maintains the flow. That one screenshot usually beats a long description.
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section class="chapter" id="quick-ref">
+      <h2>13. Quick reference</h2>
+      <table class="simple">
+        <thead>
+          <tr><th>Need</th><th>Do this</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Live form</td>
+            <td><span class="mono">https://TheLasalleChicago-hydai.github.io/wedding-room-block-form/</span></td>
+          </tr>
+          <tr>
+            <td>Start a wedding for a couple</td>
+            <td>Staff unlock → name + wedding date → Save → send Form URL + guest code</td>
+          </tr>
+          <tr>
+            <td>Couple continues later</td>
+            <td>Open resume email link → guest code</td>
+          </tr>
+          <tr>
+            <td>Staff reviews draft</td>
+            <td>List → Form URL → staff code</td>
+          </tr>
+          <tr>
+            <td>Final packet</td>
+            <td>Couple Submit final → staff Outlook PDF</td>
+          </tr>
+          <tr>
+            <td>Change passwords</td>
+            <td>Section 7 — FormPassword / StaffPassword Compose → Save</td>
+          </tr>
+          <tr>
+            <td>Change / add notification emails</td>
+            <td>Section 10 — Submit email To / Cc, or a shared mailbox</td>
+          </tr>
+          <tr>
+            <td>Empty date/number breaks Save</td>
+            <td>Section 11 — null-if-empty (and int only inside that)</td>
+          </tr>
+          <tr>
+            <td>Change form text</td>
+            <td>Edit GitHub files → push → refresh site</td>
+          </tr>
+          <tr>
+            <td>Add/edit a list column</td>
+            <td>Section 9 — list first, then Create+Update map, then test</td>
+          </tr>
+          <tr>
+            <td>Save fails / upstream error</td>
+            <td>Section 12 — Run history; often Response 200 placement</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout ok">
+        <strong>Remember</strong>
+        Guests get emails on save/submit. Staff edits stay quiet on purpose so the list and PDF can update without inbox noise.
+      </div>
+    </section>
+
+    <!-- 14 -->
+    <section class="chapter" id="license">
+      <h2>14. License &amp; disclaimer</h2>
+      <p class="lead">This project is open source under the MIT License. It is free — not a paid product.</p>
+
+      <ul>
+        <li><strong>MIT License</strong> — you may use and modify the software; keep the copyright notice. Full text: <span class="mono">LICENSE</span> in the GitHub project.</li>
+        <li><strong>Not sold</strong> — The LaSalle Chicago / maintainers do not sell this form or manual as a commercial product or subscription.</li>
+        <li><strong>No warranty</strong> — provided “as is.” No promise it will always work; authors are not liable for missed emails, list errors, outages, or business impact.</li>
+        <li><strong>Branding</strong> — hotel names and logos stay with their owners. The open-source license does not let others sell or market a product using The LaSalle Chicago (or related) trademarks without separate permission.</li>
+      </ul>
+
+      <div class="callout warn">
+        <strong>More detail</strong>
+        See <span class="mono">DISCLAIMER.md</span> and <span class="mono">LICENSE</span> in the repository:
+        <span class="mono">https://github.com/TheLasalleChicago-hydai/wedding-room-block-form</span>
+      </div>
+
+      <p style="margin-top: 2.5rem; color: var(--muted); font-size: 0.95rem;">
+        End of manual · The LaSalle Chicago — Wedding Guest Room Block Form · MIT License
+      </p>
+    </section>
+  </div>
+</body>
+</html>
+
