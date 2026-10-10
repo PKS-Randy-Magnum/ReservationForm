@@ -14,7 +14,7 @@ window.FORM_CONFIG = {
   /* After Power Automate deploy: paste the HTTP POST URL from
      "When an HTTP request is received".
      Looks like: https://prod-XX.westus.logic.azure.com:443/workflows/.../triggers/manual/paths/invoke?... */
-  API_URL: "https://default70973ca2a1b7409287ca9b1f7bb614.bd.environment.api.powerplatform.com:443/powerautomate/automations/direct/cu/13/workflows/b0cdb1aad8cd4db0bc4c6642111327dd/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=J6892GMOwhS5ciIi-VEKToW3goj004PYHB8-7D_lvLA",
+  API_URL: "https://default70973ca2a1b7409287ca9b1f7bb614.bd.environment.api.powerplatform.com:443/powerautomate/automations/direct/cu/23/workflows/09cee00f99624d7bbe64c219425c0a26/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vjbt5zcPsT63mrsUjfFtQnTtRUQ5Lotw4wtCqrlgDiw" 
 
   TITLE: "Wedding Guest Room Block Details",
 
